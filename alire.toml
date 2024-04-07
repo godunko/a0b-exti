@@ -1,0 +1,19 @@
+name = "a0b_exti"
+description = "A0B EXTI"
+version = "0.1.0"
+
+authors = ["Vadim Godunko"]
+maintainers = ["Vadim Godunko <vgodunko@gmail.com>"]
+maintainers-logins = ["godunko"]
+licenses = "Apache-2.0 WITH LLVM-exception"
+tags = ["embedded", "exti"]
+
+project-files = ["gnat/a0b_exti.gpr"]
+
+[configuration]
+disabled = true
+
+[[depends-on]]
+a0b_base = "*"
+a0b_callbacks = "*"
+a0b_time = "*"

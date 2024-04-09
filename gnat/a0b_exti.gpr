@@ -8,6 +8,7 @@ with "a0b_common";
 
 with "a0b_base";
 with "a0b_callbacks";
+with "a0b_tasking_armv7m";
 with "a0b_time";
 
 project A0B_EXTI is

@@ -1,5 +1,5 @@
 name = "a0b_exti"
-description = "A0B EXTI"
+description = "A0B EXTI API"
 version = "0.1.0"
 
 authors = ["Vadim Godunko"]

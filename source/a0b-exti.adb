@@ -13,7 +13,7 @@ package body A0B.EXTI is
    -------------------
 
    procedure Suspend_Until
-     (Self    : in out EXTI_Pin'Class;
+     (Self    : in out External_Interrupt_Line'Class;
       Timeout : A0B.Time.Duration;
       Success : out Boolean) is
    begin
@@ -25,7 +25,7 @@ package body A0B.EXTI is
    -------------------
 
    procedure Suspend_Until
-     (Self    : in out EXTI_Pin'Class;
+     (Self    : in out External_Interrupt_Line'Class;
       Timeout : A0B.Time.Monotonic_Time;
       Success : out Boolean) is
    begin
@@ -37,7 +37,7 @@ package body A0B.EXTI is
    -------------------
 
    procedure Suspend_Until
-     (Self    : in out EXTI_Pin'Class;
+     (Self    : in out External_Interrupt_Line'Class;
       Timeout : A0B.Time.Time_Span;
       Success : out Boolean) is
    begin

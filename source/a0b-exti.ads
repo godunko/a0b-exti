@@ -8,10 +8,7 @@
 
 pragma Restrictions (No_Elaboration_Code);
 
-with Ada.Synchronous_Task_Control;
-
 with A0B.Callbacks;
-with A0B.Time;
 
 package A0B.EXTI
   with Preelaborate
@@ -32,33 +29,5 @@ is
       Callback : A0B.Callbacks.Callback) is abstract;
    --  Set callback to be called on external interrupt.
    --  Callback is called by the interrupt handler.
-
-   not overriding function Suspension_Object
-     (Self : aliased in out External_Interrupt_Line)
-      return not null access Ada.Synchronous_Task_Control.Suspension_Object
-        is abstract;
-   --  Return access to suspension object that might be used to suspend task
-   --  execution till external interrupt arrived.
-
-   procedure Suspend_Until
-     (Self    : in out External_Interrupt_Line'Class;
-      Timeout : A0B.Time.Duration;
-      Success : out Boolean);
-   --  Suspend task execution till either external interrupt arrives or
-   --  timeout expires.
-
-   procedure Suspend_Until
-     (Self    : in out External_Interrupt_Line'Class;
-      Timeout : A0B.Time.Time_Span;
-      Success : out Boolean);
-   --  Suspend task execution till either external interrupt arrives or
-   --  timeout expires.
-
-   procedure Suspend_Until
-     (Self    : in out External_Interrupt_Line'Class;
-      Timeout : A0B.Time.Monotonic_Time;
-      Success : out Boolean);
-   --  Suspend task execution till either external interrupt arrives or
-   --  timeout expires.
 
 end A0B.EXTI;
